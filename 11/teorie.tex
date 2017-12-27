@@ -1,0 +1,53 @@
+\documentclass[protokol.tex]{subfiles}
+\begin{document}
+K deformacím pevných látek dochází působením tahu či tlaku. Popis velkých deformací je obecně složitý, musíme rozlišovat skutečné napětí \cite{stud_text}
+\begin{equation}
+\sigma' = \frac{F}{S},
+\end{equation} 
+počítaným s průřezem deformovaného vzorku, a smluvním napětím \cite{stud_text}
+\begin{equation} \label{eq:smluvni_napeti}
+\sigma = \frac{F}{S_0}
+\end{equation}
+s původním průřezem vzorku.
+
+Zavádíme také relativní deformaci \cite{stud_text}
+\begin{equation} \label{eq:rel_def}
+\epsilon_0 = \frac{\Delta l}{l_0}
+\end{equation}
+
+Při konstantním objemu vzorku lze psát \cite{stud_text}
+\begin{equation}
+\sigma' = \sigma (1 + \epsilon_0)
+\end{equation}
+
+Použitá metoda měření deformace vzorku produkuje výsledky jako závislost napětí $U$ na čase $t$. Pro zjištění tuhosti aparatury je nutné tyto veličiny přepočítat na závislost působící síly na změně délky \cite{stud_text}
+\begin{equation} \label{eq:tuhost}
+F = K | \Delta l |,
+\end{equation}
+\begin{equation}
+\Delta l = f D \Delta t,
+\end{equation}
+\begin{equation}
+F = \alpha U,
+\end{equation}
+kde $K$ je tuhost pružiny, $f = \num{0.6e-3} \si{\per\second}$ stálý kmitočet otáčení kotouče, $D = 0,75 \si{\milli\metre}$ zdvih za jednu otáčku a $\alpha = 50 \si{\newton\per\milli\volt}$.
+
+Pro případ dynamické zkoušky deformace je pak nutné tyto veličiny dále přepočítat podle \eqref{eq:smluvni_napeti} a \eqref{eq:rel_def} s tím, že vzhledem k tuhosti aparatury upravíme hodnotu $\Delta l$ podle \cite{stud_text}
+\begin{equation}
+|\Delta l_v (F)| = \Delta l(F) - \frac{F}{K}.
+\end{equation}
+
+Překročí-li napětí mez pružnosti, začne se vzorek deformovat plasticky, nevráti se tedy již do původního tvaru. Definujeme $\sigma_{0,2}$, tedy napětí, při kterém se vzorek zdeformuje o 0,2 \%.
+
+\subsection*{Statistické vyhodnocení}
+Průměrná hodnota naměřených veličin při $n$ měřeních je počítána podle vzorce aritmetického průměru 
+\cite{cizek_10}
+$$ \overline{x} = \frac{1}{n} \sum\limits_{i=1}^n{x_i}.$$
+Statistická chyba $\sigma_{stat}$ aritmetického průměru se získá ze vztahu \cite{cizek_10}
+$$ \sigma_{stat} = \frac{\sqrt{\frac{1}{n-1} \sum\limits_{i=1}^n{(x_i - \overline{x})^2}}}{\sqrt{n}}. $$
+Absolutní chyba je potom získána z $\sigma_{stat}$ a chyby měřidla $\sigma_{\text{měř}}$ jako \cite{cizek_1}
+$$ \sigma_{abs} = \sqrt{\sigma_{\text{\textit{měř}}}^2 + \sigma_{stat}^2}$$
+
+Chyba výpočtů se řídí zákonem přenosu chyb \cite{cizek_9}, lineární regrese podle metody nejmenších čtverců 
+\cite{cizek_11}.
+\end{document}

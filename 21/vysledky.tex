@@ -1,0 +1,101 @@
+\documentclass[protokol.tex]{subfiles}
+\begin{document}
+
+\subsection*{Hodnoty}
+Podmínky měření jsou uvedeny v následující tabulce.
+\begin{table}[H] \label{tab:podminky}
+\centering
+\setlength{\tabcolsep}{10pt}
+\input{tab/podminky}
+\caption{Podmínky měření}
+\end{table}
+
+Délka provázku fyzického kyvadla byla změřena pásovým měřidlem.
+\begin{table}[H] 
+\centering
+\setlength{\tabcolsep}{10pt}
+\input{tab/delka_provazku}
+\caption{Délka provázku pro fyzické kyvadlo}
+\label{tab:delka_provazku}
+\end{table}
+
+\newpage
+
+Průměr kuličky byl měřen posuvným měřidlem z různých stran.
+\begin{table}[H] 
+\centering
+\setlength{\tabcolsep}{10pt}
+\input{tab/rozmer_kulicky}
+\caption{Rozměry kuličky}
+\label{tab:rozmer_kulicky}
+\end{table}
+
+Hmotnost kuličky $m_k$ a hmotnost provázku $m_t$ byly měřeny na digitálních váhách.
+$$ m_k = (62,3365 \pm 0,0001) \ \si{\gram} $$
+$$ m_t = (0,5493  \pm 0,0001) \ \si{\gram} $$
+
+Redukovaná délka reverzního kyvadla byla měřena pásovým měřidlem.
+$$ l_r = (994 \pm 1) \ \si{\milli\metre} $$
+
+Perioda fyzického kyvadla byla měřena automatickým měřičem času.
+\begin{table}[H] 
+\centering
+\setlength{\tabcolsep}{20pt}
+\input{tab/periody_fyz_kyv}
+\caption{Periody fyzického kyvadla}
+\label{tab:periody_fyz_kyv}
+\end{table}
+
+\newpage
+
+Následující tabulka udává periody kmitání reverzního kyvadla s čočkou dole ($T_d$) a nahoře ($T_n$) v závislosti na vzdálenosti čočky od bližšího břitu $d_z$.
+\begin{table}[H] 
+\centering
+\setlength{\tabcolsep}{10pt}
+\input{tab/periody_rev_kyv}
+\caption{Osminásobky period reverzního kyvadla při různých polohách čočky}
+\label{tab:periody_rev_kyv}
+\end{table}
+
+Společná perioda reverzního kyvadla pro obě osy byla měřena automatickým měřičem času.
+\begin{table}[H] 
+\centering
+\setlength{\tabcolsep}{10pt}
+\input{tab/periody_rev_kyv_2}
+\caption{Periody reverzního kyvadla shodné pro obě osy}
+\label{tab:periody_rev_kyv_2}
+\end{table}
+
+\subsection*{Úkol 1}
+Dosazením do \eqref{eq:g_mat_kyv} z tabulky \ref{tab:delka_provazku}, \ref{tab:rozmer_kulicky} a \ref{tab:periody_fyz_kyv} dostaneme
+$$ g = (9,74 \pm 0,05) \ \si{\metre\per\square\second} $$
+
+\subsection*{Úkol 2}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.15]{graf}
+\caption{Závislost osminásobku periody kmitů reverzního kyvadla na vzdálenosti čočky}
+\end{figure}
+
+Směrnice přímky $fit\ dole$ je $k_1 = (0,0062 \pm 0,0002)$, směrnice $fit\ nahore$ $k_2 = (0,0404 \pm 0,0009)$.
+
+\subsection*{Úkol 3}
+Dosazením hodnot z tabulky \ref{tab:periody_rev_kyv_2} a hodnoty $l_r$ do \eqref{eq:g_rev_kyv} dostaneme
+$$ g = (9,77 \pm 0,02) \ \si{\metre\per\square\second} $$
+
+\subsection*{Úkol 4}
+Použitím hodnot z tabulky \ref{tab:delka_provazku}, \ref{tab:rozmer_kulicky} a \eqref{eq:I_fyz_kyv} a hodnot $m_k$ a $m_t$ získáme moment setrvačnosti fyzikálního kyvadla 
+$$ I = (0,0632 \pm 0,0003) \ \si{\kilo\gram\metre\squared} $$
+Dosazením do \eqref{eq:g_fyz_kyv} dostaneme
+$$ g = (9,74 \pm 0,04) \ \si{\metre\per\square\second}.$$
+Nepřesnost aproximace fyzikálního kyvadla jako matematického je tedy v rámci chyby měření.
+
+\subsection*{Úkol 5}
+Využitím \eqref{eq:teziste_kyv} získáme vzdálenost těžiště fyzického kyvadla od osy otáčení
+$$ l_s = 1005,7 \ \si{\milli\metre}$$
+Délka matematického kyvadla je 
+$$ l_m = L + R = 1010,2 \ \si{\milli\metre} $$
+Rozdíl je tedy $4,5 \ \si{\milli\metre}$.
+
+\end{document}

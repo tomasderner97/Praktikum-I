@@ -1,0 +1,39 @@
+\documentclass[protokol.tex]{subfiles}
+\begin{document}
+Teplotní objemovou roztažnost spočteme podle vztahu \cite{stud_text}
+\begin{equation}
+V = V_0 \left( 1 + \beta t \right),
+\end{equation}
+kde $V$ je objem při teplotě $t$, $V_0$ objem měřený při teplotě $0 \si{\celsius}$ a $\beta$ součinitel objemové roztažnosti \cite{stud_text}
+\begin{equation} \label{eq:souc_objem}
+\beta = \frac{1}{V_0} \left( \frac{\partial V}{\partial t} \right)_p.
+\end{equation}
+
+Pro tělesa, jejichž jeden rozměr je výrazně větší než ostatní, zavádíme délkovou roztažnost \cite{stud_text}
+\begin{equation}
+l = l_0 \left( 1 + \alpha t \right)
+\end{equation}
+vzhledem k délce tělesa $l$ při teplotě $t$. Součinitel délkové roztažnosti vypočítáme jako \cite{stud_text}
+\begin{equation} \label{eq:souc_delka}
+\alpha = \frac{1}{l_0} \left( \frac{\partial l}{\partial t} \right)_p.
+\end{equation}
+V případě izotropních těles platí \cite{stud_text}
+\begin{equation} \label{eq:vztah_ab}
+\beta = 3 \alpha.
+\end{equation}
+
+\subsection*{Statistické vyhodnocení}
+Průměrná hodnota naměřených veličin při $n$ měřeních je počítána podle vzorce aritmetického průměru 
+\cite{cizek_10}
+$$ \overline{x} = \frac{1}{n} \sum\limits_{i=1}^n{x_i}.$$
+Statistická chyba $\sigma_{stat}$ aritmetického průměru se získá ze vztahu \cite{cizek_10}
+$$ \sigma_{stat} = \frac{\sqrt{\frac{1}{n-1} \sum\limits_{i=1}^n{(x_i - \overline{x})^2}}}{\sqrt{n}}. $$
+Absolutní chyba je potom získána z $\sigma_{stat}$ a chyby měřidla $\sigma_{\text{měř}}$ jako \cite{cizek_1}
+$$ \sigma_{abs} = \sqrt{\sigma_{\text{\textit{měř}}}^2 + \sigma_{stat}^2}$$
+
+Chyba výpočtů se řídí zákonem přenosu chyb \cite{cizek_9}, lineární regrese podle metody nejmenších čtverců 
+\cite{cizek_11}.
+
+\subsection*{Pomůcky}
+Dilatometr (držák tyče a indikátorové hodinky), pásové měřidlo, teploměr, nádrž s vodou, čerpadlo, ohřívač vody, tyče ze čtyř materiálů (mosaz, měď, ocel, hliník)
+\end{document}

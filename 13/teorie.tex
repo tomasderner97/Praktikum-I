@@ -1,0 +1,54 @@
+\documentclass[protokol.tex]{subfiles}
+\begin{document}
+\subsection*{Metoda kyvů}
+Pro realizaci metody kmitů zavěsíme na připravené místo na vnitřním obvodu kola kovové závaží. Tím se naruší rovnoměrné rozložení hmoty kola vůči ose a při vychýlení závaží do strany bude kolo vykonávat kmitavý pohyb. Pro malé výchylky lze psát \cite{stud_text}
+\begin{equation} \label{eq:kyv}
+I = m l \left( \frac{g T^2}{4 \pi^2} - l \right),
+\end{equation}
+kde $g$ je místní tíhové zrychlení, $l$ vzdálenost hm. středu závaží od osy kola a $m$ hmotnost závaží.
+
+\subsection*{Metoda otáčení}
+Pro metodu otáčení je kolo opatřeno souosými válci. Na válci je navinuto vlákno, na vlákně je zavěšeno závaží. V nezajištěném stavu bude kolo roztáčeno vlivem gravitačního působení na závaží. Pro $\epsilon$ úhlové zrychlení kola a $r$ poloměr válce lze moment setrvačnosti bez úvahy tření vyjádřit jako \cite{stud_text}
+\begin{equation}
+I = m r^2 \left( \frac{g}{r \epsilon} - 1 \right).
+\end{equation}
+
+Uvažujeme-li tření nezávislé na rychlosti otáčení kola, lze psát korigovaný moment setrvačnosti \cite{stud_text}
+\begin{equation}
+I_k = m r^2 \left( \frac{g}{r \epsilon} - 1 \right) - \frac{1}{\epsilon} M_T.
+\end{equation}
+
+Označíme-li 
+\begin{equation}
+I^* = m r^2 \left( \frac{g}{r \epsilon} - 1 \right)
+\end{equation}
+a
+\begin{equation}
+\alpha = \frac{1}{\epsilon}, 
+\end{equation}
+lze psát \cite{stud_text}
+\begin{equation} \label{eq:nekorig_na_alpha}
+I^* = I_k + \alpha M_T.
+\end{equation}
+$I_k$ a $M_T$ určíme lineární regresí.
+
+Úhlové zrychlení určíme lineární regresí závislosti $\omega = \epsilon t$. Úhlovou rychlost $\omega_i$ lze vyjádřit jako \cite{stud_text}
+\begin{equation}
+\omega_i = \frac{2 \pi}{100 \Delta t_i}.
+\end{equation}
+
+\subsection*{Statistické vyhodnocení}
+Průměrná hodnota naměřených veličin při $n$ měřeních je počítána podle vzorce aritmetického průměru 
+\cite{cizek_10}
+$$ \overline{x} = \frac{1}{n} \sum\limits_{i=1}^n{x_i}.$$
+Statistická chyba $\sigma_{stat}$ aritmetického průměru se získá ze vztahu \cite{cizek_10}
+$$ \sigma_{stat} = \frac{\sqrt{\frac{1}{n-1} \sum\limits_{i=1}^n{(x_i - \overline{x})^2}}}{\sqrt{n}}. $$
+Absolutní chyba je potom získána z $\sigma_{stat}$ a chyby měřidla $\sigma_{\text{měř}}$ jako \cite{cizek_1}
+$$ \sigma_{abs} = \sqrt{\sigma_{\text{\textit{měř}}}^2 + \sigma_{stat}^2}$$
+
+Chyba výpočtů se řídí zákonem přenosu chyb \cite{cizek_9}, lineární regrese podle metody nejmenších čtverců 
+\cite{cizek_11}.
+
+\subsection*{Pomůcky}
+Posuvné měřidlo, pásové měřidlo, stopky, počítač, čítací zařízení, závaží, vlákno
+\end{document}

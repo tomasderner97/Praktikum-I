@@ -1,0 +1,65 @@
+\documentclass[protokol.tex]{subfiles}
+\begin{document}
+Pro studium kmitů vázaných oscilátorů využijeme dvě stejná fyzická kyvadla spojená slabou pružnou vazbou realizovanou dvěma pružinami. Za předpokladu malých výchylek kyvadla a nulového tření lze vyjádřit úhlová frekvence nevázaného fyzického kyvadla pomocí jeho periody kmitu $T$ jako
+\begin{equation} \label{eq:omega}
+\omega = \frac{2 \pi}{T}.
+\end{equation}
+
+Při tomto experimentu změříme periody kmitů kyvadla pro tři různé počáteční výchylky kyvadel $\varphi_1$ a $\varphi_2$. 
+\begin{enumerate}
+\item Pro počáteční výchylky $\varphi_1 (0) = \varphi_2 (0) = A$ platí \cite{stud_text}
+\begin{equation} \label{eq:phi_1}
+\varphi_1 = \varphi_2 = A \cos \omega_1 t.
+\end{equation}
+Kyvadla kmitají se stejnou amplitudou a stejnou frekvencí $\omega_1$ vyjádřenou podle \eqref{eq:omega} pomocí $T_1$.
+
+\item Pro počáteční výchylky $\varphi_1 (0) = -\varphi_2 (0) = A$ platí \cite{stud_text}
+\begin{equation} \label{eq:phi_2}
+\varphi_1 = -\varphi_2 = A \cos \omega_2 t.
+\end{equation}
+Kyvadla kmitají se stejnou amplitudou a stejnou frekvencí $\omega_2$, ale s fázvým posunem $\pi$.
+
+\newpage
+
+\item Pro $\varphi_1 (0) = 0$, $\varphi_2 (0) = A$ platí \cite{stud_text}
+\begin{equation} \label{eq:phi_3_1}
+\varphi_1 = A 
+	\sin \left[ \frac{1}{2} (\omega_1 - \omega_2) t \right] 	
+	\sin \left[ \frac{1}{2} (\omega_1 + \omega_2) t \right]
+\end{equation}
+\begin{equation} \label{eq:phi_3_2}
+\varphi_2 = A 
+	\cos \left[ \frac{1}{2} (\omega_1 - \omega_2) t \right] 	
+	\cos \left[ \frac{1}{2} (\omega_1 + \omega_2) t \right]
+\end{equation}
+
+V případě slabé vazby ($\omega_1 < \omega_2$, $\omega_1 \approx \omega_2$) obě kyvadla kmitají se stejnou frekvencí \cite{stud_text}
+\begin{equation} \label{eq:omega_3}
+\omega_3 = \frac{1}{2} (\omega_2 + \omega_1) = \frac{2 \pi}{T_3}
+\end{equation}
+a amplitudy jejich pohybu se periodicky mění s frekvencí \cite{stud_text}
+\begin{equation} \label{eq:omega_4}
+\omega_4 = \frac{1}{2} (\omega_2 - \omega_1) = \frac{2 \pi}{T_s}
+\end{equation}
+\end{enumerate}
+
+Stupeň vazby spočítáme pomocí vztahu \cite{stud_text}
+\begin{equation} \label{eq:stupen_vazby}
+\kappa = \frac{\omega_2^2 - \omega_1^2}{\omega_2^2 + \omega_1^2}.
+\end{equation}
+
+\subsection*{Statistické vyhodnocení}
+Průměrná hodnota naměřených veličin při $n$ měřeních je počítána podle vzorce aritmetického průměru 
+\cite{cizek_10}
+$$ \overline{x} = \frac{1}{n} \sum\limits_{i=1}^n{x_i}.$$
+Statistická chyba $\sigma_{stat}$ aritmetického průměru se získá ze vztahu \cite{cizek_10}
+$$ \sigma_{stat} = \frac{\sqrt{\frac{1}{n-1} \sum\limits_{i=1}^n{(x_i - \overline{x})^2}}}{\sqrt{n}}. $$
+Absolutní chyba je potom získána z $\sigma_{stat}$ a chyby měřidla $\sigma_{\text{měř}}$ jako \cite{cizek_1}
+$$ \sigma_{abs} = \sqrt{\sigma_{\text{\textit{měř}}}^2 + \sigma_{stat}^2}$$
+
+Chyba výpočtů se řídí zákonem přenosu chyb \cite{cizek_9}, lineární regrese podle metody nejmenších čtverců 
+\cite{cizek_11}.
+
+\subsection*{Pomůcky}
+Fyzická kyvadla, závěsné zařízení, spouštěcí zařízení, měřič vzdálenosti, pásové měřidlo, počítač
+\end{document}

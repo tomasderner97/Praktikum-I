@@ -1,0 +1,32 @@
+\documentclass[protokol.tex]{subfiles}
+\begin{document}
+
+Povrchově aktivní látky, v našem případě etylalkohol, způsobují snížení povrchového napětí. Závislost povrchového napětí vodného roztoku etylalkoholu lze měřit odtrhávací metodou. Drátek délky $l$ je vytahován z kapaliny silou $F$. Je-li drátek dostatečně tenký, platí \cite{stud_text}
+\begin{equation}
+2F = 2 \sigma l.
+\end{equation}
+
+Pomocí torzních vah změříme sílu $P_0$, působící v okamžiku odtržení drátku. Síla $P_0$ je v tomto případě rovna $2F$ a platí \cite{stud_text}
+\begin{equation}
+\sigma = \frac{P_0}{2l}. 
+\end{equation}
+Sílu $P_0$ formálně určíme jako rozdíl síly $P_1$, potřebné k vyvážení rámečku těsně pod hladinou kapaliny, a síly $P_2$, působící v momentu odtržení drátku od hladiny. Při výpočtech využijeme přesnějšího vztahu s korekcí na tloušťku použitého drátku. Jelikož je však v našich výpočtech síla $P_0$ určována přímo z rozdílu hodnot naměřených torzními váhami bez započítání skutečných hmotností, v následujících vzorcích $P_1$ a $P_2$ nefigurují \cite{stud_text}.
+\begin{equation} \label{eq:sigma}
+\sigma = \frac{P_0}{2l} - r \left( \sqrt{\frac{P_0 \rho g}{l}} - \frac{P_0}{l^2} \right).
+\end{equation}
+
+\subsection*{Statistické vyhodnocení}
+Průměrná hodnota naměřených veličin při $n$ měřeních je počítána podle vzorce aritmetického průměru 
+\cite{cizek_10}
+$$ \overline{x} = \frac{1}{n} \sum\limits_{i=1}^n{x_i}.$$
+Statistická chyba $\sigma_{stat}$ aritmetického průměru se získá ze vztahu \cite{cizek_10}
+$$ \sigma_{stat} = \frac{\sqrt{\frac{1}{n-1} \sum\limits_{i=1}^n{(x_i - \overline{x})^2}}}{\sqrt{n}}. $$
+Absolutní chyba je potom získána z $\sigma_{stat}$ a chyby měřidla $\sigma_{\text{měř}}$ jako \cite{cizek_1}
+$$ \sigma_{abs} = \sqrt{\sigma_{\text{\textit{měř}}}^2 + \sigma_{stat}^2}$$
+
+Chyba výpočtů se řídí zákonem přenosu chyb \cite{cizek_9}, lineární regrese podle metody nejmenších čtverců 
+\cite{cizek_11}.
+
+\subsection*{Pomůcky}
+Posuvné měřidlo,  mikrometr, torzní váhy, pinzeta, rámeček, destilovaná voda, etylalkohol, přívažky
+\end{document}

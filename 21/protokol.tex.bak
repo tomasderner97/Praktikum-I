@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+
+\usepackage[margin=3cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage[decimalsymbol=comma]{siunitx}
+\usepackage{float}
+\usepackage{subfiles}
+\usepackage{graphicx}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+
+\graphicspath{{plot/}}
+
+\pagestyle{fancy}
+\fancyhead{}
+
+\fancyhead[L]{Měření tíhového zrychlení}
+\fancyhead[C]{Fyzikální praktikum I}
+\fancyhead[R]{Tomáš Derner}
+
+\parindent 0ex
+
+\begin{document}
+
+\section*{Úkol}
+\subfile{ukol.tex}
+
+\section*{Teorie}
+\subfile{teorie.tex}
+
+\section*{Výsledky měření}
+\subfile{vysledky.tex}
+
+\section*{Diskuse}
+\subfile{diskuse.tex}
+
+\section*{Závěr}
+\subfile{zaver.tex}
+
+\section*{Literatura}
+\subfile{literatura.tex}
+
+\end{document}

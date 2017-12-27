@@ -1,0 +1,52 @@
+\documentclass[protokol.tex]{subfiles}
+\begin{document}
+\subsection*{Měření modulu $E$ z protažení drátu}
+Při působení síly F na drát průřezu S se drát pružnou deformací  prodlouží o \cite{stud_text}
+\begin{equation} \label{eq:delta_l}
+\Delta l = \frac{1}{E}\frac{l_0 F}{S}.
+\end{equation}
+$E$ je modul pružnosti v tahu, \cite{stud_text}
+\begin{equation} \label{eq:modul_dratu}
+E = \frac{\sigma}{\epsilon} = \frac{l_0 F}{\Delta l S} = \frac{4 l_0 F}{\Delta l \pi d^2}
+\end{equation}
+
+Prodloužení drátu se měří zrcátkovou metodou. Protažení drátu se převádí na pootočení $\Delta \alpha$ zrcátka upevněného na ose kladky s poloměrem $r$. \cite{stud_text}
+\begin{equation} \label{eq:alpha}
+\Delta l = r \Delta \alpha
+\end{equation}
+
+Ve vzdálenosti $L$ od zrcátka je umístěna svislá stupnice, před otočením zrcátka je v dalekohledu vidět dílek stupnice $n_0$, po otočení dílek $n$. Pro malé úhly pootočení platí pro prodloužení drátu přibližný vztah \cite{stud_text}
+\begin{equation} \label{eq:delta_l_2}
+\Delta l \approx \frac{r (n_0 - n)}{2 L}
+\end{equation}
+
+\subsection*{Měření modulu $E$ z průhybu trámku}
+Při zatěžování vodorovného kovového trámku, podepřeného dvěma břity ve vzdálenosti $l$, silou $F$ se trámek prohne průhybem 
+\begin{equation}
+y = \frac{F l^3}{48 E I_p},
+\end{equation}
+kde $I_p$ je plošný moment setrvačnosti průřezové plochy tyče vzhledem k vodorovné ose, kolmé k délce trámku a procházející těžištěm. Pro obdélníkový průřez trámku výšky $b$ a šířky $a$ lze $I_p$ vyjádřit vztahem
+\begin{equation}
+I_p = \frac{ab^3}{12}.
+\end{equation}
+
+Modul pružnosti poté dostaneme jako 
+\begin{equation} \label{eq:modul_prohnuti}
+E = \frac{F l^3}{4 y a b^3}.
+\end{equation}
+
+\subsection*{Statistické vyhodnocení}
+Průměrná hodnota naměřených veličin při $n$ měřeních je počítána podle vzorce aritmetického průměru 
+\cite{cizek_10}
+$$ \overline{x} = \frac{1}{n} \sum\limits_{i=1}^n{x_i}.$$
+Statistická chyba $\sigma_{stat}$ aritmetického průměru se získá ze vztahu \cite{cizek_10}
+$$ \sigma_{stat} = \frac{\sqrt{\frac{1}{n-1} \sum\limits_{i=1}^n{(x_i - \overline{x})^2}}}{\sqrt{n}}. $$
+Absolutní chyba je potom získána z $\sigma_{stat}$ a chyby měřidla $\sigma_{\text{měř}}$ jako \cite{cizek_1}
+$$ \sigma_{abs} = \sqrt{\sigma_{\text{\textit{měř}}}^2 + \sigma_{stat}^2}$$
+
+Chyba výpočtů se řídí zákonem přenosu chyb \cite{cizek_9}, lineární regrese podle metody nejmenších čtverců 
+\cite{cizek_11}.
+
+\subsection*{Pomůcky}
+Posuvné měřidlo, pásové měřidlo, drát, kladka, zrcátko, stupnice, dalekohled, závaží, břity, kovové trámky, objektivový mikrometr
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass[protokol.tex]{subfiles}
+\begin{document}
+\begin{comment}
+\begin{table}[H] \label{tab:podminky}
+\centering
+\setlength{\tabcolsep}{10pt}
+\input{tab/podminky}
+\caption{Podmínky měření}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[resolution=350]{plot/graf}
+\caption{Graf závislosti napětí na relativním prodloužení}
+\end{figure}
+\end{comment}
+
+Měření probíhalo při teplotě $24.5 \si{\celsius}$.
+
+Délka drátu (vnitřní šířka rámečku) byla měřena posuvným měřidlem.
+$$ l = (1.964 \pm 0.002) \times \num{e-2} \ \si{\metre} $$
+
+Průměr drátu byl měřen mikrometrem na třech místech.
+$$ r = (0.60 \pm 0.01) \times \num{e-3} \ \si{\metre} $$
+
+V následující tabulce jsou uvedeny rozdíly hodnot naměřených torzními váhami $\Delta m$ a hodnoty $P_0$. Pro výpočty je využita přibližná hodnota tíhového zrychlení $g = 9.81 \si{\metre\per\second\squared}$.
+
+\begin{table}[H] \label{tab:tab}
+\centering
+\setlength{\tabcolsep}{15pt}
+\input{tab/tab}
+\caption{$\Delta m$ a $P_0$ v závislosti na koncentraci $c$}
+\end{table}
+
+\newpage
+
+Následující graf zachycuje závislost povrchového napětí počítaného pomocí \eqref{eq:sigma}. Lineární regrese byla provedena pomocí křivky $y = ae^{bx} + c$.
+\begin{figure}[H]
+\centering
+\includegraphics[resolution=350]{plot/out}
+\caption{Graf závislosti povrchového napětí na koncentraci}
+\end{figure}
+
+\begin{table}[H] \label{tab:parametry}
+\centering
+\setlength{\tabcolsep}{10pt}
+\input{tab/parametry}
+\caption{Parametry lineární regrese}
+\end{table}
+\end{document}

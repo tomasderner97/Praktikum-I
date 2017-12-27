@@ -1,0 +1,32 @@
+\documentclass[protokol.tex]{subfiles}
+\begin{document}
+\begin{figure}[H]
+\centering
+\includegraphics[]{graf}
+\caption{Hey graf!}
+\end{figure}
+
+\pgfplotstabletypeset[
+	col sep = space,
+	multicolumn names,
+	columns/0/.style = {
+		%column name = $column$,
+		string type,
+		column type = {S[
+			scientific-notation = engineering, 
+			round-mode = figures,
+			round-precision = 3,
+			table-format = -3.1
+		]},
+		preproc/expr = {##1/1e-6}
+	},
+	every head row/.style = {
+		before row = \toprule,
+		after row = \midrule,
+	},
+	every last row/.style = {
+		after row = \bottomrule
+	},
+]{tab/table.csv}
+
+\end{document}

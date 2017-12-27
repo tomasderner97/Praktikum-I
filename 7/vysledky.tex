@@ -1,0 +1,83 @@
+\documentclass[protokol.tex]{subfiles}
+\begin{document}
+Pohyb kyvadla byl měřen pomocí automatického měřiče vzdálenosti a doby kmitů byly poté vyhodnoceny pomocí počítače. Jelikož časový krok při měření činil 0,05 s, byla tato hodnota také zvolena jako chyba měřidla.
+\begin{table}[H] 
+\centering
+\setlength{\tabcolsep}{15pt}
+\input{tab/t_0}
+\caption{Naměřené hodnoty $T_0$}
+\label{tab:t_0}
+\end{table}
+
+\begin{table}[H] 
+\centering
+\setlength{\tabcolsep}{15pt}
+\input{tab/t_slabsi}
+\caption{Naměřené hodnoty pro slabší pružinu}
+\label{tab:t_slabsi}
+\end{table}
+
+\begin{table}[H] 
+\centering
+\setlength{\tabcolsep}{15pt}
+\input{tab/t_silnejsi}
+\caption{Naměřené hodnoty pro silnější pružinu}
+\label{tab:t_silnejsi}
+\end{table}
+
+Následující tabulka obsahuje měření kmitů kyvadel se shodnou a protilehlou fází pro několik vzdáleností pružiny od závěsu kyvadel. Vzdálenost $l$ byla měřena pásovým měřidlem, jedná se o vzdálenost od dolní hrany závěsu kyvadla po vrchní hranu úchytu pružiny.
+\begin{table}[H] 
+\centering
+\setlength{\tabcolsep}{15pt}
+\input{tab/t_vazba}
+\caption{Závislost dob kmitů na poloze pružiny}
+\label{tab:t_vazba}
+\end{table}
+
+\subsection*{Úkol 1}
+Z tabulky \ref{tab:t_0} vyčteme 
+$$ T_0 = (1,88 \pm 0,01) \ \si{\second}. $$
+
+\subsection*{Úkol 2}
+Z tabulky \ref{tab:t_slabsi} zjistíme hodnoty pro slabší pružinu
+$$T_{sl_1} = (1,87 \pm 0,01) \ \si{\second},$$
+$$T_{sl_2} = (1,79 \pm 0,01) \ \si{\second},$$
+$$T_{sl_3} = (1,84 \pm 0,01) \ \si{\second},$$
+$$T_{sl_4} = (41,48 \pm 0,32) \ \si{\second}$$
+a z tabulky \ref{tab:t_silnejsi} pak
+$$T_{si_1} = (1,87 \pm 0,01) \ \si{\second},$$
+$$T_{si_2} = (1,73 \pm 0,01) \ \si{\second},$$
+$$T_{si_3} = (1,81 \pm 0,01) \ \si{\second},$$
+$$T_{si_4} = (21,85 \pm 0,19) \ \si{\second}.$$
+
+\subsection*{Úkol 3}
+Dosazením hodnot z tabulky \ref{tab:t_slabsi} a \ref{tab:t_silnejsi} do \eqref{eq:omega} dostaneme
+$$ \omega_{sl_1} = (3,361 \pm 0,016) \ \si{\per\second}, $$
+$$ \omega_{sl_2} = (3,507 \pm 0,019) \ \si{\per\second}, $$
+$$ \omega_{sl_3} = (3,415 \pm 0,019) \ \si{\per\second}, $$
+$$ \omega_{sl_4} = (0,076 \pm 0,001) \ \si{\per\second}, $$
+$$ \omega_{si_1} = (3,361 \pm 0,016) \ \si{\per\second}, $$
+$$ \omega_{si_2} = (3,637 \pm 0,019) \ \si{\per\second}, $$
+$$ \omega_{si_3} = (3,475 \pm 0,025) \ \si{\per\second}, $$
+$$ \omega_{si_4} = (0,144 \pm 0,001) \ \si{\per\second}. $$
+
+Použitím vztahu \eqref{eq:omega_3} a \eqref{eq:omega_4} získáme
+$$ \omega_{sl_3} = (3,434 \pm 0,012) \ \si{\per\second}, $$
+$$ \omega_{sl_4} = (0,073 \pm 0,012) \ \si{\per\second}, $$
+$$ \omega_{si_3} = (3,499 \pm 0,012) \ \si{\per\second}, $$
+$$ \omega_{si_4} = (0,138 \pm 0,012) \ \si{\per\second}. $$
+
+\subsection*{Úkol 4}
+Podle vztahu \eqref{eq:stupen_vazby} dostaneme stupeň vazby pro slabší pružinu
+$$ \kappa_{sl} = (0,042 \pm 0,007) $$
+a silnější pružinu
+$$ \kappa_{si} = (0,079 \pm 0,007). $$
+
+\subsection*{Úkol 5}
+Následující graf zobrazuje závislost $\kappa$ na $l$ pomocí údajů z tabulky \ref{tab:t_vazba}. Je proložen kvadratickým fitem.
+\begin{figure}[H]
+\centering
+\includegraphics[resolution=350]{plot/graf}
+\caption{Graf závislosti stupně vazby na vzdálenosti $l$}
+\end{figure}
+\end{document}
